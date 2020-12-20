@@ -60,9 +60,13 @@ namespace vector
             g.DrawLine(new Pen(Brushes.Red, 2), new Point(H/2,W/2), new Point(Convert.ToInt32(H/2+x1*15),Convert.ToInt32(W/2-y1*15)));//A
             g.DrawLine(new Pen(Brushes.Blue, 2), new Point(H/2,W/2), new Point(Convert.ToInt32(H/2+x2*15), Convert.ToInt32(W/2-y2*15)));//B                                                                                                                         
             if (radioButton1.Checked == true) // СЛОЖЕНИЕ
-            { g.DrawLine(new Pen(Brushes.Green, 2), new Point(Convert.ToInt32(H/2), Convert.ToInt32(W / 2)), new Point(Convert.ToInt32(H/2+x1*20+x2*20), Convert.ToInt32(W/2-y1-y2))); }
+            { g.DrawLine(new Pen(Brushes.Green, 2), 
+                new Point(Convert.ToInt32(H/2), Convert.ToInt32(W / 2)), 
+                new Point(Convert.ToInt32(H/2+x1*15+x2*15), Convert.ToInt32(W/2-y1*15-y2*15))); }
             if (radioButton2.Checked == true) //ВЫЧИТАНИЕ
-            { g.DrawLine(new Pen(Brushes.Green, 2), new Point(Convert.ToInt32(H/2+x1*20), Convert.ToInt32(W/2-y1*20)), new Point(Convert.ToInt32(H/2+x2*20), Convert.ToInt32(W/2-y2*20))); } }
+            { g.DrawLine(new Pen(Brushes.Green, 2), 
+                new Point(Convert.ToInt32(H/2+x1*15), Convert.ToInt32(W/2-y1*15)),
+                new Point(Convert.ToInt32(H/2+x2*15), Convert.ToInt32(W/2-y2*15))); } }
 
          public Form1()
          { InitializeComponent(); }
